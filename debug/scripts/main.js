@@ -72,19 +72,16 @@ $(function () {
             firstName : "Laura",
             lastName : "Williams",
             fullName: function () {
-                return firstName + ' ' + lastName;
+                return this.firstName + ' ' + this.lastName;
             },
-            state: $('#state').get()
+            state: "IN"
         };
 		
 		console.log(userObject.fullName());
-        console.log(userObject);
+        console.log(userObject.state);
 		
         
-
     }
-
-
 
 
 });
@@ -108,18 +105,21 @@ $(function () {
 /*
 Write getLength function here
 */
-var foo3 = 'my test data';
-var n = foo3.length;
+
+function getLength(str){
+    return str.length;
+
+};
 
 // Uncomment this to test getLength function
-console.log(n); 
-/*
+console.log('--------GET LENGTH--------');
+
+//*  specify length on the output
 var foo = getLength('hello world');
 console.log(foo); // Outputs 11
 var foo2 = getLength('lorem lorem asldkf asldfkja sdf');
 console.log(foo2); // Outputs 31
 console.log('-----------------------------'); 
-*/
 
 
 
@@ -136,18 +136,25 @@ console.log('-----------------------------');
 Write sumArray function here
 */
 
-var total = sumArray([1,2,3,4,5,6,]);
-console.log(total);
-/* Uncomment this to test sumArray function
+
+   function sumArray(input) {
+    var sum=0;
+    for(i=0; i<input.length; i++) {
+        sum = sum + input[i];
+    }
+} 
+   
+
+// Uncomment this to test sumArray function
 console.log('-------------  SUM ARRAY ----------------'); 
-foo = sumArray([2, 5, 6]);
+
+foo = sumArray[2, 5, 6];
 console.log(foo); // Outputs 13
 
-foo = sumArray([2, 5, 6, 2, 5, 6]);
-console.log(foo); // Outputs 26
+foo2 = sumArray[2, 5, 6, 2, 5, 6];
+console.log(foo2); // Outputs 26
 
 console.log('-----------------------------');
-*/
 
 
 /*
@@ -164,9 +171,13 @@ console.log('-----------------------------');
 Write percentage function here
 */
 
+function percentage(num){
+    return (num*100).toFixed(0)+"%";
+    
+}
 
 
-/* Uncomment this to test percentage function
+//* Uncomment this to test percentage function
 console.log('------------ Percentage-----------------');
 
 foo = percentage(.23);
@@ -176,7 +187,6 @@ foo2 = percentage(.5);
 console.log(foo2) //Outputs "50%"
 
 console.log('-----------------------------');
-*/
 
 /*
     Write a JavaScript function that takes a date and adds a 
@@ -184,7 +194,7 @@ console.log('-----------------------------');
     //Sample
     var d = new Date('1/1/2001');
     var newD = addDays(d, 10);
-    console.log(newD);  //outputs Thu Jan 11 2001 00:00:00 GMT-0600 (Central Standard Time)
+    console.log(newD); //outputs Sun Jun 06 2004 00:00:00 GMT-0500 (Central Daylight Time)
 */
 
 /*
@@ -192,14 +202,28 @@ Write addDays function here
 */
 
 
-/* Uncomment this to test addDays function
+function addDays(startDate, numberOfDays){
+
+    var returnDate = new Date(
+        startDate.getFullYear(),
+        startDate.getMonth(),
+        startDate.getDate()+numberOfDays,
+        startDate.getHours(),
+        startDate.getMinutes(),
+        startDate.getSeconds());
+return returnDate;
+       
+}
+    
+
+//Uncomment this to test addDays function
 var d = new Date('1/1/2001');
 var newD = addDays(d, 10);
 console.log(newD); //outputs Thu Jan 11 2001 00:00:00 GMT-0600 (Central Standard Time)
 d = new Date('9/10/2001');
 newD = addDays(d, 1000);
-console.log(newD); //outputs Thu Jan 11 2001 00:00:00 GMT-0600 (Central Standard Time)
-*/
+console.log(newD); //outputs Sun Jun 06 2004 00:00:00 GMT-0500 (Central Daylight Time)
+
 
 
 /*
@@ -214,6 +238,17 @@ console.log(newD); //outputs Thu Jan 11 2001 00:00:00 GMT-0600 (Central Standard
 /*
 Write sortArray function here
 */
+
+var array1 = [3, 5, 1, 10];
+
+function sortArray(input){
+    input.sort(function(a, b){return a-b});
+    
+}
+
+console.log(sortArray(array1)); //outputs [1,3,5,10]
+
+
 
 /* Uncomment this to test sortArray function
 var array1 = [3, 5, 1, 10];
@@ -307,3 +342,4 @@ $(function () {
         $('.invalid').removeClass('invalid');
     });
 });
+   

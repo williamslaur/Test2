@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    width: 200px;
 }
 
 body {
@@ -16,23 +17,29 @@ body {
     background:#ff9191; 
 }
 
-.input-group, .check-group{
+.terms{
     padding:20px;
 }
 
-.input-group input,
-.input-group textarea,
-.input-group select{
+#firstName{
+    width:100%;
+}
+
+.input textarea,
+.input first,
+.input last,
+.input email,
+.input select{
     display:block;
     width:100%;
-    font-size:20px;
+    font-size:30px;
     padding:10px;
 }
-.control-panel{
+.buttons{
     text-align:center;
-}
-.control-panel button{
     font-size:20px;
+    margin: 5px;
+    padding: 5px;
 }
 
 .successmsg{

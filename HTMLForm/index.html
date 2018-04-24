@@ -8,6 +8,9 @@
     </head>
 
     <body>
+            <section id="messages">
+            </section>
+         
         <div class="main">
             <div class="nav">
                 <div class="main-title">
@@ -46,34 +49,30 @@
                 <form>
                     <div class="input first">
                         <label for="firstName">First Name</label> 
-                        <input type="text" id="firstName" placeholder="First Name"></input>
-                        <span class="error requiredMsg">First Name is required</span>
-                    </div>
+                        <input type="text" id="firstName" placeholder="First Name" required></input>
+                  </div>
                     <div class="input last">
                         <label for="lastName"> Last Name</label>
                         <input type="text" id="lastName" placeholder="Last Name"></input>
-                        <span class="error requiredMsg">Last Name is required</span>
-                    </div>
+                   </div>
                     <div class="input email">
                         <label for="email"> Email Address</label>
                         <input type="email" id="emailAddress" placeholder="Email Address"></input>
-                        <span class="error requiredMsg">Email is required</span>
-                        <span class="error emailMsg">Valid email is required</span>
-                    </div>
+                  </div>
                     <div class="input select">
                         How did you find us? <select id="findUs">
                         <option selected="selected">BioPlex Store</option>
                         <option>Other</option></select>
                     </div>
                     <div class="input textarea"> 
-                        <label for="why">Why do you need this? </label>
+                        <label for="why">Why do you need this blender? </label>
                         <textarea id="textarea" placeholder="Why you need this"></textarea>
                     </div>
                     <div class="terms">
                         <input type="checkbox" required> By checking this box you accept our terms and conditions.</input>
                     </div>
                     <div class="buttons">
-                        <button type="submit" id="btnSubmit">Submit</button><button type="reset" id="btnReset">Reset</button>
+                        <button id="btnSubmit">Submit</button>  <button id="btnReset">Reset</button>
                     </div>
                     
                     

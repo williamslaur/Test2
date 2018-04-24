@@ -1,9 +1,6 @@
 $(document).ready(function(){
-
-    //hide error messages at first
-    $('.error').hide;
-    
-
+debugger
+   
     var btn = getE('btnSubmit');
     btn.addEventListener('click', submit);
     
@@ -14,7 +11,7 @@ $(document).ready(function(){
         return document.getElementById(id);
     }
 
-var inputs = ['firstName', 'lastName', 'emailAddress' ];
+var inputs = ['firstName', 'lastName', 'emailAddress', ];
 var ERROR_CLASS = 'invalid';
 
 
@@ -43,10 +40,9 @@ $(function(){
     
         var terms = getE('terms');
         if (terms.checked === false) {
-    
-            errorList.push('You must accept the terms and conditions');
+                errorList.push('You must accept the terms and conditions');
         }
     }
-}
+});
 
 }
