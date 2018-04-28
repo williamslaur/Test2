@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    font-size: 20px;
+    
 }
 
 body {
@@ -125,18 +127,7 @@ ul {
     margin: 0 auto;
 }
 
-.buttons{
-    text-align:center;
-    padding: 25px;
-}
-.terms{
-    text-align: center;
-}
-.input{
-    padding: 5px;
-    margin: 5px;
-}
-.error{
+.errors{
     color:#ff0000;
     display:block;
 }
@@ -144,3 +135,28 @@ ul {
     border:1px solid #ff0000;
     background:#ff9191; 
 }
+
+.buttons{
+    text-align:center;
+    padding: 25px;
+}
+
+.input{
+   display: block;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    clear: both;
+}
+
+#firstName,
+#lastName,
+#emailAddress,
+#textarea, 
+#findUsId{
+    width: 60%;
+    float: right;
+}
+
+
+

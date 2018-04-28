@@ -31,33 +31,33 @@ $(function () {
     //This is supposed to add an event listener but it's causing an error
     //Fix it please.
     //document.getElementById('btnMake').addEventListener('click', build);
-    $('#btnMake').on('click', build);
+    $('#btnMke').on('click', build);
 
     function build() {
 		
-        var firstName = $('#firstName');
+        var firstName = $('firstName');
         var firstNameValue = firstName.val('Whoops');
 
 
-        var lastName = $('#lastName');
+        var lastName = $('lastName');
         var lastNameValue = lastName.val();
 
         /*invalid should add a red border around the respective input
             It will also show a hidden error message */
-        if (firstNameValue === '') {
-            firstName.addClass('invalid');
+        if (lastNameValue === '') {
+            firstName.addClass('.invalid');
 
-            var parentDiv = firstName.closest('.input-group');
+            var parentDiv = firstName.closest('#input-group');
             var errorSpan = parentDiv.find('.errors');
             errorSpan.show();
         }
 
-        if (lastNameValue === '') {
+        if (lastNameValue < '') {
             lastName.addClass('invalid');
 
             var parentDiv = lastName.closest('.input-group');
             var errorSpan = parentDiv.find('.errors');
-            errorSpan.show();
+            errorSpan.visible();
         }
 
 
@@ -67,7 +67,7 @@ $(function () {
             Please fix it
         ======================================*/
 
-	/*
+		/*
         var userObject = {
             firstName: ,
             lastName: ,
@@ -81,22 +81,17 @@ $(function () {
         console.log(userObject);
 		*/
 
-        var userObject = {
-            firstName : $("#firstName").val(),
-            lastName : $("#lastName").val(),
-            fullName: function () {
-                return this.firstName + ' ' + this.lastName;
-            },
-            state: $('#state').val()
-        };
-		
-		console.log(userObject.fullName());
-        console.log(userObject);
-		
+        
+
+
     }
 
 
+
+
+
 });
+
 
 
 /*========================
@@ -117,20 +112,14 @@ $(function () {
 Write getLength function here
 */
 
-function getLength(str){
-    return str.length;
-
-};
-
-// Uncomment this to test getLength function
-console.log('--------GET LENGTH--------');
-
-//*  specify length on the output
+/* Uncomment this to test getLength function
+console.log('-------------Get Length----------------'); 
 var foo = getLength('hello world');
 console.log(foo); // Outputs 11
 var foo2 = getLength('lorem lorem asldkf asldfkja sdf');
 console.log(foo2); // Outputs 31
 console.log('-----------------------------'); 
+*/
 
 
 
@@ -147,27 +136,16 @@ console.log('-----------------------------');
 Write sumArray function here
 */
 
-
-function sumArray(input) {
-    var i;
-    var sum=0;
-    for(i=0; i<input.length; i++) {
-        sum += input[i];
-    }
-    return sum;
-};
-
-
-// Uncomment this to test sumArray function
+/* Uncomment this to test sumArray function
 console.log('-------------  SUM ARRAY ----------------'); 
-
 foo = sumArray([2, 5, 6]);
 console.log(foo); // Outputs 13
 
-foo2 = sumArray([2, 5, 6, 2, 5, 6]);
-console.log(foo2); // Outputs 26
+foo = sumArray([2, 5, 6, 2, 5, 6]);
+console.log(foo); // Outputs 26
 
 console.log('-----------------------------');
+*/
 
 
 /*
@@ -184,13 +162,7 @@ console.log('-----------------------------');
 Write percentage function here
 */
 
-function percentage(num){
-    return (num*100).toFixed(0)+"%";
-    
-}
-
-
-//* Uncomment this to test percentage function
+/* Uncomment this to test percentage function
 console.log('------------ Percentage-----------------');
 
 foo = percentage(.23);
@@ -200,6 +172,7 @@ foo2 = percentage(.5);
 console.log(foo2) //Outputs "50%"
 
 console.log('-----------------------------');
+*/
 
 /*
     Write a JavaScript function that takes a date and adds a 
@@ -207,40 +180,23 @@ console.log('-----------------------------');
     //Sample
     var d = new Date('1/1/2001');
     var newD = addDays(d, 10);
-    console.log(newD); //outputs Sun Jun 06 2004 00:00:00 GMT-0500 (Central Daylight Time)
+    console.log(newD);  //outputs Thu Jan 11 2001 00:00:00 GMT-0600 (Central Standard Time)
 */
 
 /*
 Write addDays function here
 */
 
-//This particular function I found - states that it will always work no matter how many days you add
 
-function addDays(startDate, numberOfDays){
-
-    var returnDate = new Date(
-        startDate.getFullYear(),
-        startDate.getMonth(),
-        startDate.getDate()+numberOfDays,
-        startDate.getHours(),
-        startDate.getMinutes(),
-        startDate.getSeconds());
-return returnDate;
-       
-}
-    
-
-//Uncomment this to test addDays function
-
-console.log('-----------Dates------------------');
+/* Uncomment this to test addDays function
 var d = new Date('1/1/2001');
 var newD = addDays(d, 10);
 console.log(newD); //outputs Thu Jan 11 2001 00:00:00 GMT-0600 (Central Standard Time)
 d = new Date('9/10/2001');
 newD = addDays(d, 1000);
-console.log(newD); //outputs Sun Jun 06 2004 00:00:00 GMT-0500 (Central Daylight Time)
+console.log(newD); //outputs Thu Jan 11 2001 00:00:00 GMT-0600 (Central Standard Time)
+*/
 
-console.log('-----------------------------');
 
 /*
     Challenge - 
@@ -255,18 +211,10 @@ console.log('-----------------------------');
 Write sortArray function here
 */
 
-
-function sortArray(array){
-    array.sort(function(a, b){return a - b});
-    return array;    
-};
-// not sure why it returns the number of items in the array in () first
-
-console.log('--------Challenge---------------------');
-//* Uncomment this to test sortArray function
+/* Uncomment this to test sortArray function
 var array1 = [3, 5, 1, 10];
 console.log(sortArray(array1)); //outputs [1,3,5,10]
-
+*/
 
 
 
@@ -355,4 +303,3 @@ $(function () {
         $('.invalid').removeClass('invalid');
     });
 });
-   

@@ -5,11 +5,11 @@
         <title>Sweepstakes</title>
         <link rel="stylesheet" href="styles/main.css">
         <script src="http://localhost:35729/livereload.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
 
     <body>
-            <section id="messages">
-            </section>
+            
          
         <div class="main">
             <div class="nav">
@@ -48,28 +48,30 @@
                     </section>
                 <form>
                     <div class="input first">
-                        <label for="firstName">First Name</label> 
-                        <input type="text" id="firstName" placeholder="First Name" required></input>
+                        <label for="firstName" class="label">First Name </label>
+                        <input type="text" id="firstName" placeholder="First Name"></input></br>
                   </div>
                     <div class="input last">
-                        <label for="lastName"> Last Name</label>
+                        <label for="lastName" class="label">Last Name</label>
                         <input type="text" id="lastName" placeholder="Last Name"></input>
                    </div>
                     <div class="input email">
-                        <label for="email"> Email Address</label>
+                        <label for="email" class="label">Email Address</label>
                         <input type="email" id="emailAddress" placeholder="Email Address"></input>
                   </div>
                     <div class="input select">
-                        How did you find us? <select id="findUs">
-                        <option selected="selected">BioPlex Store</option>
-                        <option>Other</option></select>
+                        <label for="how" id="findUs" class="label">How did you find us? </label>
+                        <select id="findUsId">
+                            <option selected="selected">BioPlex Store</option>
+                            <option>Other</option>
+                        </select>
                     </div>
                     <div class="input textarea"> 
-                        <label for="why">Why do you need this blender? </label>
+                        <label for="why" class="label" id="why">Why do you need this blender? </label>
                         <textarea id="textarea" placeholder="Why you need this"></textarea>
-                    </div>
+                    </div></br></br>
                     <div class="terms">
-                        <input type="checkbox" required> By checking this box you accept our terms and conditions.</input>
+                        <input type="checkbox"> By checking this box you accept our terms and conditions.</input>
                     </div>
                     <div class="buttons">
                         <button id="btnSubmit">Submit</button>  <button id="btnReset">Reset</button>
@@ -89,7 +91,7 @@
             </div>
         </div>
         <script src="scripts/main.js"></script>
-        
+             
     </body>
 
 </html>
