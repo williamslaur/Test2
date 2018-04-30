@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
-    font-size: 20px;
-    
+       
 }
 
 body {
@@ -125,6 +124,7 @@ ul {
     clear: both;
     width: 60%;
     margin: 0 auto;
+    font-size: 20px;
 }
 
 .errors{
@@ -137,16 +137,21 @@ ul {
 }
 
 .buttons{
+    clear: both;
     text-align:center;
-    padding: 25px;
+    padding: 10px;
+    margin: 10px; 
+    font-size: 20px;
+    
 }
 
-.input{
-   display: block;
-    padding: 5px;
-    margin: 5px;
-    font-size: 20px;
-    clear: both;
+.input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.checkBox {
+    text-align: center;
 }
 
 #firstName,
@@ -154,9 +159,25 @@ ul {
 #emailAddress,
 #textarea, 
 #findUsId{
-    width: 60%;
+    width: 70%;
+    font-size: 20px;
+    padding: 10px;
     float: right;
 }
 
+
+
+.invalid::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #ff0000;
+  }
+  .invalid::-moz-placeholder { /* Firefox 19+ */
+    color: #ff0000;
+  }
+  .invalid:-ms-input-placeholder { /* IE 10+ */
+    color: #ff0000;
+  }
+  .invalid:-moz-placeholder { /* Firefox 18- */
+    color: #ff0000;
+  }
 
 
